@@ -1,0 +1,64 @@
+<!Doctype html>
+<html>
+<head>
+	<title>Catalog de note</title>
+	<link rel="stylesheet" type="text/css" href="catalogNote.css">
+	<script src="catalogNote.js"type="text/javascript"></script>
+</head>
+
+<body onload="deseneazaTabel()">
+	<div id="lista_elevi_wrapper">
+		<h2>Lista elevi</h2>
+
+		<form class="containerAdaugaElev" onsubmit="adauga(this,event)" >
+			<label>Nume:</label>
+			<input name="nume" type="text">
+			<input type="submit" value="Adauga elev">
+		</form>
+
+		<div class="containerElevilorAdaugati">
+
+			<table>
+				<button id="sort"onclick="sortare3('nota_elev');">Sorteaza ascendent dupa medie note</button></br>
+				<button id="sort" onclick="sortare4('nota_elev');">Sorteaza descendent dupa medie note</button>
+				<thead>
+					<tr>
+						<td>Nume</td>
+						<td>Medie note</td>
+						<td></td>
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+			
+		</div>
+	</div>
+
+	<div id="note_elev_wrapper">
+		<button onclick="invizibil()">Ascunde notele</button>
+		<h2>Note elev:<span id="nume_elev"></span></h2>
+
+		<form class="containerAdaugaNota" id="form_elev" onsubmit="adaugaNota(this, event)">
+			<label>Nota:</label>
+			<input name="nota_elev" type="number">
+			<input type="submit" value="Adauga nota">
+		</form>
+
+		<div class="containerElevilorSelectati">
+			<button id="sort" onclick="sortare1('nota_elev');">Sorteaza ascendent dupa medie note</button></br>
+			<button id="sort" onclick="sortare2('nota_elev');">Sorteaza descendent dupa medie note</button>
+
+			<table>
+				<thead>
+					<tr>
+						<td>Nota</td>
+					</tr>
+				</thead>
+				<tbody id="catalog"></tbody>
+			</table>
+
+		</div>	
+	</div>
+
+</body>
+</html>

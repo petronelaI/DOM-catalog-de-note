@@ -1,0 +1,44 @@
+body {
+	background-color:#b3f442;
+	margin: 0;
+	padding: 0;
+}
+
+#note_elev_wrapper{
+	float:right;
+	margin-top: 0px;
+	display :none;
+}   
+
+#lista_elevi_wrapper{
+	float :left;
+	background-color: #b3f442;
+	display: inline;
+	float: left;
+	width: 50%;
+	height: 930px;
+}   
+
+#note_elev_wrapper.visible{
+	display: block;
+	background-color: lightblue;
+	float: right;
+	width: 50%;
+	margin: 0;
+	height: 930px;
+	}
+
+#sort {
+	background-color: green;
+	color: white;
+	border: none;
+}
+
+.containerAdaugaElev, 
+.containerElevilorAdaugati,
+.containerAdaugaNota,
+.containerElevilorSelectati {
+	border: 1px solid black;
+	margin: 10px;
+	width: 900px;
+}
